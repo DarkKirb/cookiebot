@@ -1,0 +1,9 @@
+server="irc.example.com"
+networkname="examplenet"
+port=6667
+nick="cookiebot"
+username="cookiebot"
+password="example"
+genpassword=False
+znc=False
+modules=[]
