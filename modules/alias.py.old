@@ -41,12 +41,12 @@ class Module(module.Modulev1):
             self.s.send("PRIVMSG %s :Aliases saved!" % (chan))
         for trigger, output in self.aliases.items():
             if msg[3] == ":!"+trigger:
-                if len(msg) <= 4:
-                    self.s.send(("PRIVMSG %s :"%(chan))+output.format(chan=chan, nick=nick, user=user, host=host))
-                else:
-                    args = { "args": ' '.join(msg[4:]), "nick":nick, "user":user, "host":host, "chan":chan }
-                    i=0
-                    for m in msg[4:]:
-                        args["arg%i"%i] = m
-                        i=i+1
-                    self.s.send(("PRIVMSG %s :"%(chan))+output.format(**args))
+		if len(msg) <= 4:
+	                self.s.send(("PRIVMSG %s :"%(chan))+output.format(chan=chan, nick=nick, user=user, host=host))
+		else:
+			args = { "args": ' '.join(msg[4:]), "nick":nick, "user":user, "host":host, "chan":chan }
+			i=0
+			for m in msg[4:]:
+				args["arg%i"%i] = m
+				i=i+1
+			self.s.send(("PRIVMSG %s :"%(chan))+output.format(**args))

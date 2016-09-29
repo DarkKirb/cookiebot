@@ -17,7 +17,7 @@ class Module:
     def raw(self, msg):
         pass
 class Modulev2(Module):
-
+	pass
 class Modulev1(Modulev2):
     def __init__(self, sock):
         pass
