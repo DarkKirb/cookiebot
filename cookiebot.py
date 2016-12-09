@@ -57,8 +57,8 @@ while True:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             traceback.print_exception(exc_type, exc_value, exc_traceback)
             #sock.send("PRIVMSG *schat :chat darklink")
-            sock.send("PRIVMSG darklink :Got a '%s' while handling the line '%s' with module '%s'. Please see my logs." % (repr(exception), ' '.join(msg), m.getName()))
-            sock.send("PRIVMSG darklink :Traceback: %s" %(repr(traceback.format_exception(exc_type, exc_value, exc_traceback))))
+#            sock.send("PRIVMSG darklink :Got a '%s' while handling the line '%s' with module '%s'. Please see my logs." % (repr(exception), ' '.join(msg), m.getName()))
+#            sock.send("PRIVMSG darklink :Traceback: %s" %(repr(traceback.format_exception(exc_type, exc_value, exc_traceback))))
             #sock.send("PRIVMSG *schat :close darklink")
 
 
